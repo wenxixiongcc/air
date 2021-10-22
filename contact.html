@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="标题">
+	<title>标题</title>
+	<!-- <link rel="favicon" href="assets/images/favicon.png"> -->
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+	<!--引用百度地图API-->
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kBFCibQRRepejXt9L2LsBbBR7vpPAOOu"></script>
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="index.html">
+					<span style="font-size: 30px;color:#3C78D8;">YUANHONGJIXIE</span>
+					<!-- <img src="assets/images/logo.png" alt="Techro HTML5 template"> -->
+                </a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right mainNav">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="services.html">服务支持</a></li>
+					<li><a href="projects.html">产品案例</a></li>					
+					<li class="active"><a href="contact.html">联系我们</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<header id="head" class="secondary">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<h1>联系我们</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- container -->
+	<div class="container">
+	    <div class="row">
+			<!-- <div class="col-md-6">
+				<h3 class="section-title">您的信息</h3>
+				<p>说明</p>		   -->
+		<!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
+		<!-- <form name="sentMessage" id="contactForm"  novalidate> 
+		<div class="control-group">
+		<div class="controls">
+		<input type="text" class="form-control" 
+		placeholder="姓名" id="name" required
+		data-validation-required-message="请输入您的姓名" />
+		<p class="help-block"></p>
+		</div>
+		</div> 	
+		<div class="control-group">
+		<div class="controls">
+		<input type="email" class="form-control" placeholder="邮箱地址" 
+		id="email" required
+		data-validation-required-message="请输入您的邮箱地址" />
+		</div>
+		</div> 	
+
+		<div class="control-group">
+		<div class="controls">
+		<textarea rows="10" cols="100" class="form-control" 
+		placeholder="内容" id="message" required
+		data-validation-required-message="请输入您需要咨询的问题" minlength="5" 
+		data-validation-minlength-message="Min 5 characters" 
+		maxlength="999" style="resize:none"></textarea>
+		</div>
+		</div> 		 
+		<div id="success"> </div>  -->
+		<!-- For success/fail messages -->
+		<!-- <button type="submit" class="btn btn-primary pull-right">提交</button><br />
+		</form>
+		</div> -->
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-6">
+					<h3 class="section-title">办公地址</h3>
+					<div class="contact-info">
+						<h5>地址</h5>
+						<p>东莞长安</p>
+						
+						<h5>QQ/微信</h5>
+						<p>111111111</p>
+
+						<h5>邮箱</h5>
+						<p>info@webthemez.com</p>
+
+						<h5>联系人</h5>
+						<p>张三</p>
+
+						<h5>联系电话</h5>
+						<p>+66666666666/99999999999</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h3 class="section-title">时间安排</h3>
+					<div class="contact-info">
+						<h5>星期一 - 星期五</h5>
+						<p>09:00 AM - 6:00 PM</p>
+						
+						<h5>星期六</h5>
+						<p>休息</p>
+						
+						<h5>星期日</h5>
+						<p>休息</p>
+					</div>
+				</div>				
+			</div>
+			<h3 class="section-title">期待您的来电</h3>
+			<p>
+			  来电说明
+			</p>						
+		</div>
+		<div class="col-md-6">
+			<h3 class="section-title">地图指引</h3>
+			<div class="contact-info">
+				<!--百度地图容器-->
+				<div class="baidumap" id="map">地图加载中，请等待...</div>
+			</div>
+		</div>		
+	    </div>
+	</div>
+	<!-- /container -->
+
+	
+
+	<footer id="footer">
+		<div class="container">
+			<!-- <div class="social text-center">
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-dribbble"></i></a>
+				<a href="#"><i class="fa fa-flickr"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+			</div> -->
+
+			<div class="clear"></div>
+			<!--CLEAR FLOATS-->
+		</div>
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="simplenav">
+								<a href="index.html">首页</a> | 
+								<a href="about.html">关于我们</a> |
+								<a href="services.html">服务支持</a> |
+								<a href="projects.html">产品案例</a> |
+								<a href="contact.html">联系我们</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 panel">
+						<div class="panel-body">
+							<p class="text-right">
+								Copyright &copy; 2021. <span>空气压缩</span> 
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<!-- /row of panels -->
+			</div>
+		</div>
+	</footer>
+
+    <script type="text/javascript">
+		//创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(113.822105,22.813597),18);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"联系电话 1234/5678：<br/>QQ/微信：666666666<br/>详细地址：东莞长安",title:"远宏机械",imageOffset: {width:-46,height:-21},position:{lat:22.813805,lng:113.822617}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+	  </script>
+    
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="contact/jqBootstrapValidation.js"></script>
+    <script src="contact/contact_me.js"></script>
+	<script src="assets/js/custom.js"></script> -->
+	<!-- Google Maps -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script src="assets/js/google-map.js"></script> -->
+</body>
+</html>
+<style lang="scss" scoped>
+.baidumap {
+    background: #fff;
+    box-sizing: initial;
+}
+.baidumap label{
+    color: #000;
+    max-width: none;
+}
+.baidumap img{
+	max-width: none;
+}
+</style>
